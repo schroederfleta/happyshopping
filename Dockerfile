@@ -7,5 +7,5 @@ ADD nginx /opt/nginx
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget nginx \
  && chmod +x /opt/entrypoint.sh
 
-CMD /opt/entrypoint.sh
+ENTRYPOINT /opt/entrypoint.sh
 
