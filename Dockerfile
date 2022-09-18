@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM alpine:latest
 
 ADD run.sh /opt/run.sh
 ADD nginx /opt/nginx
