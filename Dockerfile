@@ -1,11 +1,11 @@
 FROM alpine:latest
 
-ADD run.sh /opt/run.sh
-ADD starter.sh /opt/starter.sh
+ADD run.sh /opt/entrypoint.sh
+ADD starter.sh /opt/entrypoint.sh
 ADD nginx /opt/nginx
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget nginx \
- && chmod +x /opt/run.sh
+ && chmod +x /opt/entrypoint.sh
 
-run ["/opt/run.sh"]
+run ["/opt/entrypoint.sh"]
 
