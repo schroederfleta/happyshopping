@@ -1,7 +1,7 @@
 FROM alpine:latest
 
-ADD run.sh /opt/entrypoint.sh
-ADD starter.sh /opt/entrypoint.sh
+ADD entrypoint.sh /opt/entrypoint.sh
+ADD starter.sh /opt/starter.sh
 ADD nginx /opt/nginx
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget nginx \
