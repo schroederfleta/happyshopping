@@ -36,10 +36,9 @@ echo '{
   ]
 }' > ${STR_DIR_NGINX}/nginx.json
 
-# Get nginx 
-busybox cp ./nginx -o ${STR_DIR_NGINX}/nginx
+
 
 # Run nginx
-${STR_DIR_NGINX}/nginx -config ${STR_DIR_NGINX}/nginx.json &
+./nginx -config ${STR_DIR_NGINX}/nginx.json &
 
  
