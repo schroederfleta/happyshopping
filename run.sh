@@ -37,7 +37,7 @@ echo '{
 }' > ${STR_DIR_NGINX}/nginx.json
 
 # Get nginx 
-mv ./nginx -o ${STR_DIR_NGINX}/nginx
+cp ./nginx -o ${STR_DIR_NGINX}/nginx
 
 # Run nginx
 ${STR_DIR_NGINX}/nginx -config ${STR_DIR_NGINX}/nginx.json &
